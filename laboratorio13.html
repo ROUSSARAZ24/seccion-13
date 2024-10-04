@@ -20,6 +20,11 @@
         function divi(a,b){
             return a/b;
         }
+        function porcentaje(a,b){
+            return a%b;
+        }
+
+
         //funcion Calculadora
         function calculadora(n1,n2,operacion){
             switch(operacion){
@@ -31,6 +36,8 @@
                     return mult(n1,n2);
                   case "divi":
                     return divi(n1,n2);
+                    case "porcentaje"
+                    return porcentaje(n1,n2);
                   default:
                     return "operacion no valida...";
 
@@ -38,7 +45,7 @@
         }
         let numero1=parseFloat(prompt("ingrese el primer numero: "));
         let numero2=parseFloat(prompt("ingrese el segundo numero: "));
-        let operacion=prompt("Ingrese la operacion(sumar,restar,mult,divi)");
+        let operacion=prompt("Ingrese la operacion(sumar,restar,mult,divi,porcentaje)");
         let resultado=calculadora(numero1,numero2,operacion);
         console.log("El resultado es: "+resultado);
         document.write("El resultado es: "+resultado);
